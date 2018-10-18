@@ -1,4 +1,4 @@
-{% set version = '2.2.2' %}
+{% set version = '2.3.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/R6_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/R6/R6_{{ version }}.tar.gz
-  sha256: 087756f471884c3b3ead80215a7cc5636a78b8a956e91675acfe2896426eae8f
+  sha256: 05b5e117659796c67a16de0854661b25d0739da53a8cb93dcfc528d4c185fac9
 
 build:
   merge_build_host: True  # [win]
@@ -47,13 +47,13 @@ test:
     # Put any additional test requirements here.
 
 about:
-  home: https://github.com/wch/R6/
+  home: https://github.com/r-lib/R6/
   license: MIT + file LICENSE
-  summary: The R6 package allows the creation of classes with reference semantics, similar to
-    R's built-in reference classes. Compared to reference classes, R6 classes are simpler
-    and lighter-weight, and they are not built on S4 classes so they do not require
-    the methods package. These classes allow public and private members, and they support
-    inheritance, even when the classes are defined in different packages.
+  summary: Creates classes with reference semantics, similar to R's built-in reference classes.
+    Compared to reference classes, R6 classes are simpler and lighter-weight, and they
+    are not built on S4 classes so they do not require the methods package. These classes
+    allow public and private members, and they support inheritance, even when the classes
+    are defined in different packages.
   license_family: MIT
 
 extra:
@@ -65,22 +65,22 @@ extra:
 
 # Package: R6
 # Title: Classes with Reference Semantics
-# Version: 2.2.2
+# Version: 2.3.0
 # Authors@R: person("Winston", "Chang", role = c("aut", "cre"), email = "winston@stdout.org")
-# Description: The R6 package allows the creation of classes with reference semantics, similar to R's built-in reference classes. Compared to reference classes, R6 classes are simpler and lighter-weight, and they are not built on S4 classes so they do not require the methods package. These classes allow public and private members, and they support inheritance, even when the classes are defined in different packages.
+# Description: Creates classes with reference semantics, similar to R's built-in reference classes. Compared to reference classes, R6 classes are simpler and lighter-weight, and they are not built on S4 classes so they do not require the methods package. These classes allow public and private members, and they support inheritance, even when the classes are defined in different packages.
 # Depends: R (>= 3.0)
 # Suggests: knitr, microbenchmark, pryr, testthat, ggplot2, scales
 # License: MIT + file LICENSE
-# URL: https://github.com/wch/R6/
+# URL: https://github.com/r-lib/R6/
 # LazyData: true
-# VignetteBuilder: knitr
-# RoxygenNote: 6.0.1
+# BugReports: https://github.com/r-lib/R6/issues
+# RoxygenNote: 6.1.0.9000
 # NeedsCompilation: no
-# Packaged: 2017-06-12 18:48:43 UTC; winston
+# Packaged: 2018-10-04 14:48:18 UTC; winston
 # Author: Winston Chang [aut, cre]
 # Maintainer: Winston Chang <winston@stdout.org>
 # Repository: CRAN
-# Date/Publication: 2017-06-17 08:22:59 UTC
+# Date/Publication: 2018-10-04 15:30:03 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
